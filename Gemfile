@@ -18,10 +18,15 @@ end
 
 # Gems used only for developing and not
 # used in production environments.
-group :test do
+group :development, :test do
+  gem 'rake'
   gem 'rspec-rails'
+end
+
+group :development do
   gem 'reek'
   gem 'cane'
+  gem 'travis-lint'
 end
 
 gem 'jquery-rails'

@@ -3,6 +3,6 @@ end
 
 describe MyLife do
   it "should fail" do
-    fail
+    expect{ fail }.to raise_error
   end
 end

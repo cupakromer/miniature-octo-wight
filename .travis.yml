@@ -4,5 +4,8 @@ rvm:
   - 1.9.3
 env:
   - DB=sqlite
+  - DB=postgresql
 script:
   - RAILS_ENV=test bundle exec rake --trace db:migrate test
+before_script:
+  - psql -c 'create database travis_yaml_test' -U postgres

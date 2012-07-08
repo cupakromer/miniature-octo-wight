@@ -8,4 +8,4 @@ env:
 script:
   - RAILS_ENV=test bundle exec rake --trace db:migrate test
 before_script:
-  - psql -c 'create database travis_yaml_test' -U postgres
+  - psql -c 'create database travis_rails_test' -U postgres

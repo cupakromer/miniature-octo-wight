@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 
-gem 'sqlite3'
+gem 'pg', groups: [:test, :production]
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -24,6 +24,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'sqlite3'
   gem 'reek'
   gem 'cane'
   gem 'travis-lint'

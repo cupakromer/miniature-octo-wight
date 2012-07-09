@@ -19,7 +19,7 @@ defaults: &defaults
   pool: 5
   timeout: 5000
   host: localhost
-  <<: *<%= ENV['DB'] || "postgresql" %>
+  <<: *<%= ENV['DB'] || "sqlite" %>
 
 # SQLite version 3.x
 #   gem install sqlite3
